@@ -108,7 +108,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center">
+    <div className="relative min-h-screen flex flex-col items-center justify-center">
       {/* background image and overlay */}
       <div className="absolute inset-0 z-0">
           <Image 
@@ -122,12 +122,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#500000] to-[#500000]/80 mix-blend-multiply"></div>
       </div>
       
+      <h1 className="relative z-10 text-3xl font-bold text-white mb-6 text-center drop-shadow-lg">
+        TAMU Formula Electric Team To-Do
+      </h1>
       {/* content */}
       <div className="relative z-10 w-full max-w-md p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold text-[#500000] mb-4 text-center">TAMU Formula Electric Team To-Do</h1>
-        
         <TaskInput
-          placeholder="enter your task"
           onSubmit={addTask}
         />
         
