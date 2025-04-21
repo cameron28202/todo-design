@@ -6,7 +6,7 @@ import { Trash2} from "lucide-react";
 import { Spinner } from "@/components/Spinner";
 import Image from "next/image";
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://todo-design.onrender.com';
 
 export interface Task {
   id: number;
@@ -17,6 +17,7 @@ export interface Task {
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
 
   // fetch tasks when component mounts
   useEffect(() => {
